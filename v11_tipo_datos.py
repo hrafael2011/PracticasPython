@@ -18,3 +18,31 @@ print(type(booleano))
 print(type(lista))
 print(type(listaString))
 print(type(tupla))
+print('\n')
+print('----------------------------------------------')
+
+for stri in range(5):
+    print(str(stri) +'-'+string) 
+    
+
+for lis in lista:
+    print(lis)
+  
+
+for lis2 in listaString:
+    print(lis2)
+
+for tu in tupla:
+    print(tu)
+
+
+
+#recorrer un array con while
+contador = 0
+n = len(lista)
+while contador < n:
+    print(lista[contador])
+    contador+=1
+
+
+    

@@ -1,13 +1,13 @@
 
 
-def calculadora(numero1, numero2, basica=False):
+def calculadora(numero1 , numero2, basica=False):
 
     suma = numero1+numero2
     resta = numero1-numero2
     muliplicacion = numero1*numero2
     divicion = numero1/numero2
 
-    global cadena 
+ 
     cadena = ""
     if basica != False:
         cadena +="La suma es: " + str(suma)
@@ -20,7 +20,7 @@ def calculadora(numero1, numero2, basica=False):
         cadena +="La division es: " + str(divicion)
         cadena += '\n'
 
-    #return cadena
+    return  cadena
 
-print(calculadora(1, 1, basica=True))
+print(calculadora(1,2, basica=True))
 
