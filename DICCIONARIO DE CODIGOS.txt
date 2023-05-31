@@ -1,0 +1,580 @@
+***************************************************************************************************************************
+*    					      PYTHON DICCIONARIOS DE CODIGO                                                                                                                     *
+*                                                                                                                         *
+***************************************************************************************************************************
+
+
+
+*********BACICO***********
+
+#####variables#####
+
+texto = "mi nombre es hendrick"
+numero = 1
+decimal = 1.5
+
+print(texto )
+print(numero)
+print(decimal)
+
+
+#####concatenacion#####
+
+nombre = "Hendrik"
+apellido = "Rafael"
+web = "MiprimeraWeb.com"
+
+print(nombre + " " + apellido +" "+ web)
+print(f"{nombre} {apellido} - {web}")
+print("{} {} {}".format(nombre, apellido, web))
+print("mi nombre es {} mi apellido {} pagina web {}".format(nombre, apellido, web))
+
+
+
+#######tipos de datos python#######
+
+#string
+
+string = "esto es un string"
+entero = 1
+flotante = 1.5
+booleano = False
+lista = [4,5,6,7]
+listaString = ["nombre", 25, "Apellido"]
+tupla = ('mater','ingenieria', 'licenciatura')
+
+
+print(type(string))
+print(type(entero))
+print(type(flotante))
+print(type(booleano))
+print(type(lista))
+print(type(listaString))
+print(type(tupla))
+print('\n')
+print('----------------------------------------------')
+
+
+#######convertir datos######
+import random
+
+
+numero = str(25)
+texto = "mi edad es"
+flotante = 2
+
+print(texto +" "+ numero +" mi cumpleanos es el mes"+" "+(str(flotante)))
+
+cantidad = len(texto)
+#print(cantidad)
+
+for num in range(cantidad): 
+    letra = texto[num]
+    print(letra)
+
+######operadores aritmeticos#######
+
+numero1=77
+numero2=99
+
+
+#ejemplo 1
+suma=numero1+numero2
+print(suma)
+
+#ejemplo 2
+print(f"la suma es {suma}")
+
+#ejemplo 3
+
+print(f"la suma es {numero1 + numero2}") # suma
+print(f"la resta es {numero1 - numero2}") # Resta
+print(f"la divicion es {numero1 / numero2}") # Division
+print(f"la Multiplicacion es {numero1 * numero2}") # Multiplicacion
+print(f"el Resto es {numero2 % numero1}") # Resto se uitilza para saber cuanto resta de una divicion
+
+
+########operadores de asignacion######
+
+
+edad = 55
+
+edad += 5
+
+print(edad)
+
+
+#####incremento y descremento########
+
+cantidad = 5
+valor = 7
+
+cantidad = cantidad + 1 #incremento
+valor = valor - 1 #descremento
+
+
+print(cantidad)
+print(valor)
+
+
+###########Entrada y salida de datos#############
+
+nombre = input('Cual es tu nombre: ')
+edad = input('Cual es tu edad: ')
+
+print(f'Veo que tu nombre es {nombre} y tu edad es {edad}')
+
+print('****************otra forma pero con conversiones***************************')
+
+sueldo = float(input('cual es tu sueldo: '))
+
+print(f'veo que tu sueldo actual es {sueldo}') #podria haber hecho la conversion aqui
+
+
+######## Operadores de comparacion IF y Else #######
+
+#color = 'azul'
+
+color = input('cual es tu color favorito: ')
+
+if color == 'azul': 
+    print('Es correcto')
+else :
+    print('incorrecto')
+
+
+year = int(input('en que year estamos: '))
+
+if year > 2023:
+    print('estas en anio posterior a 2023')
+else:
+    print('estas un anio anterior')
+
+
+##########if anidados##########
+
+nombre = "Hendrick Rafael"
+continente = "Americano"
+ciudad = "Santo Domingo"
+edad = 33
+mayoria_edad = 18
+
+if edad >= mayoria_edad:
+    if continente != "Americano":
+        print(f'{nombre}, no eres americano')
+    else:
+        print(f'{nombre}, eres americano y eres de la ciudad de {ciudad}')
+else:
+    print(f'{nombre}, no eres yaor de edad')    
+
+
+############elif##########
+
+
+dia = int(input('intruduzca en numero el dia de la semana que desea: '))
+
+if dia == 1:
+    print('lunes')
+elif dia == 2:
+    print('martes')
+elif dia == 3:
+    print('Miercoles')
+elif dia == 4:
+    print('Jueves')
+elif dia == 5:
+    print('Viernes')
+elif dia == 6 or dia ==7:
+    print('es fin desemana')
+elif dia != 1 and dia !=7:
+    print('no es un dia de semana')
+
+##### Operador And ########
+
+edad_minima = 18
+edad_maxima = 65
+edad_oficial = int(input('Introduce tu edad: '))
+
+
+if edad_oficial >= edad_minima and edad_oficial <= edad_maxima:
+    print('puede trabajar')
+else:
+    print('no puede trabajar')
+
+
+##########or y negacion########
+
+pais = 'Rusia'
+
+if pais == 'colombia' or pais =='espana':
+    print(f'{pais}, es de habla hispana')
+else:
+    print('no es de habla hispana')
+
+if not(pais == 'colombia' or pais =='espana'):
+    print('no son paises de habla hispana')
+else:
+    print(f'{pais}, es  de habla hispana')
+    
+if pais != 'colombia' or pais !='espana':
+    print(f'{pais}, no es de habla hispana')
+else:
+    print(' es de habla hispana')
+
+
+#######for#########
+
+
+contador = 0
+resultado = 0
+
+for contador in range(0,10):
+    print(f'el numero es:'+' '+str(contador))
+    resultado += contador # es otra forma de expresar resultado = resultado + contador
+print('resultado es:'+''+ str(resultado))
+
+
+
+######## Multiplicacion con For ##########
+
+print('******************Multiplicacion*********************')
+
+numero_usario = int(input('insterte el numero a multiplicar: ') )
+
+if numero_usario < 1:
+    numero_usuario = 1
+
+for multiplicacion in range(1,11):
+        print(f'{numero_usario} x {multiplicacion} = {numero_usario*multiplicacion}')
+
+
+nombres = ['Rafael','cedano','Hendrick']
+
+for nombre in nombres[0]:
+    print(nombre)
+
+
+
+#########while#######
+
+contador = 1
+coma = str(0)
+
+while contador <= 99:
+    coma = coma + ',' + str(contador)
+    contador = contador + 1
+    print(coma)
+
+
+####### multiplicacion con while #########
+
+
+insertar_numero = int(input('inserte un numero: '))
+
+if insertar_numero < 1:
+    insertar_numero = 1
+
+
+contador = 0
+
+while contador <=9:
+    contador = contador + 1
+    print(f'{insertar_numero} x {contador} = {insertar_numero*contador}')
+    
+
+########funciones########
+
+def tuNombre():
+    print('Hendrick')
+    print('Anthony')
+    print('Rafael')
+    print('Cedano')
+
+tuNombre()
+
+
+
+###### Funciones con Prametros######
+
+nombre = input('inserte nombre: ')
+edad = int(input('inserte edad: '))
+    
+def tuNombreEdad(nombre, edad):
+    print(f'Mi nombre es {nombre} y mi edad es {edad}')
+    if edad >= 18:
+        print('es mayor de edad')
+    else:
+        print('Es menor de edad')
+
+------------------------------------------
+
+def muestraNombre(nombre,edad):
+  
+
+    nombre = input('Introduce el nombre: ')
+    edad = int(input('Introduce tu edad: '))
+    print(nombre)
+    print(edad)
+
+    muestraNombre(nombre,edad)
+
+
+####### Tabla funciones #####	
+
+def tabla(numero):
+    print(f'***************** La tabla de multiplicar del {numero}************')
+    for contador in range(11):
+        operacion = contador * numero
+        print(f'{numero} x {contador} = {operacion}')
+    print('\n')
+tabla(1)
+tabla(2)
+
+print('-----------------------------------------------------------')
+
+for num_tabla in range(1,11):
+    tabla(num_tabla)
+
+
+
+tuNombreEdad(nombre, edad)
+
+
+
+######### Funcion ejemplo Calculadora con RETURN #########
+
+def calculadora(numero1 , numero2, basica=False):
+
+    suma = numero1+numero2
+    resta = numero1-numero2
+    muliplicacion = numero1*numero2
+    divicion = numero1/numero2
+
+ 
+    cadena = ""
+    if basica != False:
+        cadena +="La suma es: " + str(suma)
+        cadena += '\n'
+        cadena +="La resta es: " + str(resta)
+        cadena += '\n'
+    else:
+        cadena +="La multiplicacion es: "+ str(muliplicacion)
+        cadena += '\n'
+        cadena +="La division es: " + str(divicion)
+        cadena += '\n'
+
+    return  cadena
+
+print(calculadora(1,2, basica=True))
+
+
+
+######Get########
+
+def getName(nombre):
+    texto = nombre
+    return texto
+def getAge(edad):
+    texto = edad
+    return texto
+
+def getAll(nombre, edad):
+    text = getName(nombre) + "\n" + str(getAge(edad))
+    return text
+print(getAll('Hendrick', 33))
+
+
+
+###### Variable Local ########
+
+def HolaMundo():
+    text = 'hola Mundo'
+    #return text # retun hace que las variables puedan ser usada fuera de la funcion
+    #global se utiliza para hacer que una variable se vuelva local , que pueda utilizar fuera de la funcion
+    print('Dentro de la funcion: ', text)
+
+print(HolaMundo())
+
+text = 'hola Mundo'
+print('Fuera de la funcion: ', text)
+
+
+texto = 'Hendrick Rafael'
+
+comprobar = isinstance(texto, str)
+
+###### Funciones Predefinidas #######
+
+if comprobar:
+    print('es un string')
+else:
+    print('no es un string')
+
+if not isinstance(texto, float):
+    print('no es un float')
+else:
+    print('es otro tipo de dato')
+
+texto2 = "   texto con espacio   "
+nombre = 'Hendrick'
+
+print(texto2.strip()) #quita los espacios
+print(nombre.lower()) #convierte el texto en miniscula
+print(nombre.upper()) #convierte el texto en mayuscula
+print(nombre.capitalize())
+print(len(nombre)) #cuenta la cantidad de caracteres
+print(texto2.find('t')) #busca una palabra o letra y la sustituye
+print(texto2.replace('texto', 'palabra').strip())# reemplaza una palabra
+
+
+
+##### Arrays ######
+peliculas = ['el senor de los anillos','Thor', 'the man stil']
+Artistas = ['Michael Jackson','Shakira','Fernando']
+
+##print(Artistas)
+#print(Artistas[0])
+print(Artistas[1:]) # esto quier decir del uno en adelante
+print(Artistas[0:1]) # este quiere decir del 0 al 1
+
+#Artistas.append('Julio Igulesias') # se utiliza para aguegar mas elementos a la lista
+
+
+#print(peliculas[1].upper())
+
+#print(Artistas)
+
+
+#### Recorrer Arrays #####
+
+peliculas = ['el senor de los anillos','Thor', 'the man stil']
+
+nueva_peli = ''
+while nueva_peli != 'para':
+    nueva_peli = input('introduzca una peli: ')
+
+    if nueva_peli != 'para':
+        peliculas.append(nueva_peli)
+
+
+for pelicula in peliculas:
+    print(f'{peliculas.index(pelicula)+1}. {pelicula}')
+
+##### Arrays Multidimencional #####
+
+contactos = [
+    [
+    'Hendrick',
+    'hendrick@gmail.com'
+    ],
+    [
+    'Rafael',
+    'rafael@gmail.com'
+    ],
+    [
+    'Anthony',
+    'anthony@gmail.com'
+    ]
+]
+
+for contacto in contactos:
+    for elemento in contacto:
+        if contacto.index(elemento) == 0:
+            print(f'{contacto.index(elemento)+1}. Nombre: {elemento}')
+        else:
+            print(f'{contacto.index(elemento)+1}.Email: {elemento}')
+    print('\n')
+
+
+##### Mas metodos y ejemplos con Arrays ######
+
+cantantes = ['Tego Carderon','Daddy Yanque', 'Lito', 'Polaco']
+numeros = [1, 2, 4, 7, 9, 8]
+
+#Orndenar
+numeros.sort()
+print(numeros)
+
+#agregar
+numeros.append(10)
+print(numeros)
+cantantes.insert(0,'Don Omar')
+print(cantantes)
+
+#eliminar
+cantantes.pop(1)
+numeros.remove(8)
+print(cantantes)
+print(numeros)
+
+#Dar la vuelta
+numeros.reverse()
+print(numeros)
+
+#Buscar en una lista
+print('Lito' in cantantes)
+
+#contar elementos de una lista
+print(len(cantantes))
+
+#cuantas veces aparece un elemento
+numeros.append(9)
+print(numeros.count(9))
+
+#conseguir indice
+print(cantantes.index('Polaco'))
+
+#unir listas
+
+cantantes.extend(numeros)
+print(cantantes)
+
+####### Diccionarios #####
+
+#Diccionarios
+
+personas = [
+{
+    
+    'nombre': 'Hendrick',
+    'Apellido': 'Rafael',
+    'Email': 'inghendrickRafael@gmail.com'
+},
+{
+    'nombre': 'Alexander',
+    'Apellido': 'Acosta',
+    'Email': 'alexander@gmail.com'
+
+}
+]
+
+#print(personas['Apellido'])
+
+
+for persona in personas:
+    print(f'El nombre es {persona["nombre"]}')
+    print(f'El correo es {persona["Email"]}')
+    print('\n')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
