@@ -19,8 +19,8 @@ class Usuario:
 
         #cifrado contrasena
         cifrado = hashlib.sha256()
-        cifrado.update(self.password.encode('utf8'))
-
+        cifrado.update(self.password.encode('utf8'))# Es nesesario ponerle .encode('utf8') porque update viene en bite, y para que
+                                                    #para que pueda ser reconocido como exageximal es nesesario hacerlo asi
         fecha = datetime.datetime.today()
         sql = "INSERT INTO usuarios VALUES(null, %s, %s, %s, %s, %s)"
         usuario = (self.nombre, self.apellidos, self.email, cifrado.hexdigest(), fecha)

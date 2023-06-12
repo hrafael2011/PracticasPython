@@ -1,4 +1,9 @@
 import usuario as md
+#import notes.accionesNotas as accion
+#from ..notes import accionesNotas as accion
+#import notes.accionesNotas as accion
+from notes.accionesNotas import Acciones_notas
+
 
 
 class Acciones:
@@ -13,7 +18,6 @@ class Acciones:
         passw = input("cual es tu contrasena: ")
 
         user = md.Usuario(nombre, apellido, email, passw)
-        
         registro = user.registrar()
 
         if registro[0]>=1:
@@ -52,11 +56,12 @@ class Acciones:
                 4. Salir
           """)
         
+        hazEl = Acciones_notas.crear()
 
         acciones = int(input('Que quieres hacer?'))
 
         if acciones == 1:
-            print('crear notas')
+            hazEl.crear(usuario)
             self.proximaAcciones(usuario)
         elif acciones == 2:
             print('mostrar notas')
